@@ -10,8 +10,8 @@ namespace WinFormsPivotCustomCellDisplayText
         {
             InitializeComponent();
             salesPersonTableAdapter1.Fill(nwindDataSet1.SalesPerson);
-            fieldCountry1.FilterValues.FilterType = PivotFilterType.Included;
-            fieldCountry1.FilterValues.Add("UK");
+            fieldCountry.FilterValues.FilterType = PivotFilterType.Included;
+            fieldCountry.FilterValues.Add("UK");
         }
 
         private void pivotGridControl1_CustomCellDisplayText(object sender, 

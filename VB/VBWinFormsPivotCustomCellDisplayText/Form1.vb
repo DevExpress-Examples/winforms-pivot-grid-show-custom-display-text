@@ -6,8 +6,8 @@ Public Class Form1
 
         InitializeComponent()
         SalesPersonTableAdapter1.Fill(NwindDataSet1.SalesPerson)
-        fieldCountry1.FilterValues.FilterType = PivotFilterType.Included
-        fieldCountry1.FilterValues.Add("UK")
+        fieldCountry.FilterValues.FilterType = PivotFilterType.Included
+        fieldCountry.FilterValues.Add("UK")
 
     End Sub
 

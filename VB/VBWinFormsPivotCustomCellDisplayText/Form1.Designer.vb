@@ -22,13 +22,18 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataSourceColumnBinding1 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding2 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding3 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding4 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding5 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Me.NwindDataSet1 = New VBWinFormsPivotCustomCellDisplayText.nwindDataSet()
         Me.SalesPersonTableAdapter1 = New VBWinFormsPivotCustomCellDisplayText.nwindDataSetTableAdapters.SalesPersonTableAdapter()
-        Me.fieldSalesPerson1 = New DevExpress.XtraPivotGrid.PivotGridField()
-        Me.fieldProductName1 = New DevExpress.XtraPivotGrid.PivotGridField()
-        Me.fieldExtendedPrice1 = New DevExpress.XtraPivotGrid.PivotGridField()
-        Me.fieldCountry1 = New DevExpress.XtraPivotGrid.PivotGridField()
-        Me.fieldCategoryName1 = New DevExpress.XtraPivotGrid.PivotGridField()
+        Me.fieldSalesPerson = New DevExpress.XtraPivotGrid.PivotGridField()
+        Me.fieldProductName = New DevExpress.XtraPivotGrid.PivotGridField()
+        Me.fieldExtendedPrice = New DevExpress.XtraPivotGrid.PivotGridField()
+        Me.fieldCountry = New DevExpress.XtraPivotGrid.PivotGridField()
+        Me.fieldCategoryName = New DevExpress.XtraPivotGrid.PivotGridField()
         Me.PivotGridControl1 = New DevExpress.XtraPivotGrid.PivotGridControl()
         CType(Me.NwindDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PivotGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,52 +48,57 @@ Partial Class Form1
         '
         Me.SalesPersonTableAdapter1.ClearBeforeFill = True
         '
-        'fieldSalesPerson1
+        'fieldSalesPerson
         '
-        Me.fieldSalesPerson1.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea
-        Me.fieldSalesPerson1.AreaIndex = 1
-        Me.fieldSalesPerson1.FieldName = "Sales Person"
-        Me.fieldSalesPerson1.Name = "fieldSalesPerson1"
+        Me.fieldSalesPerson.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea
+        Me.fieldSalesPerson.AreaIndex = 1
+        DataSourceColumnBinding1.ColumnName = "Sales Person"
+        Me.fieldSalesPerson.DataBinding = DataSourceColumnBinding1
+        Me.fieldSalesPerson.Name = "fieldSalesPerson"
         '
-        'fieldProductName1
+        'fieldProductName
         '
-        Me.fieldProductName1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
-        Me.fieldProductName1.AreaIndex = 1
-        Me.fieldProductName1.Caption = "Product"
-        Me.fieldProductName1.FieldName = "ProductName"
-        Me.fieldProductName1.Name = "fieldProductName1"
+        Me.fieldProductName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
+        Me.fieldProductName.AreaIndex = 1
+        Me.fieldProductName.Caption = "Product"
+        DataSourceColumnBinding2.ColumnName = "ProductName"
+        Me.fieldProductName.DataBinding = DataSourceColumnBinding2
+        Me.fieldProductName.Name = "fieldProductName"
         '
-        'fieldExtendedPrice1
+        'fieldExtendedPrice
         '
-        Me.fieldExtendedPrice1.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
-        Me.fieldExtendedPrice1.AreaIndex = 0
-        Me.fieldExtendedPrice1.FieldName = "Extended Price"
-        Me.fieldExtendedPrice1.Name = "fieldExtendedPrice1"
+        Me.fieldExtendedPrice.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
+        Me.fieldExtendedPrice.AreaIndex = 0
+        DataSourceColumnBinding3.ColumnName = "Extended Price"
+        Me.fieldExtendedPrice.DataBinding = DataSourceColumnBinding3
+        Me.fieldExtendedPrice.Name = "fieldExtendedPrice"
         '
-        'fieldCountry1
+        'fieldCountry
         '
-        Me.fieldCountry1.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea
-        Me.fieldCountry1.AreaIndex = 0
-        Me.fieldCountry1.FieldName = "Country"
-        Me.fieldCountry1.Name = "fieldCountry1"
+        Me.fieldCountry.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea
+        Me.fieldCountry.AreaIndex = 0
+        DataSourceColumnBinding4.ColumnName = "Country"
+        Me.fieldCountry.DataBinding = DataSourceColumnBinding4
+        Me.fieldCountry.Name = "fieldCountry"
         '
-        'fieldCategoryName1
+        'fieldCategoryName
         '
-        Me.fieldCategoryName1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
-        Me.fieldCategoryName1.AreaIndex = 0
-        Me.fieldCategoryName1.Caption = "Category"
-        Me.fieldCategoryName1.FieldName = "CategoryName"
-        Me.fieldCategoryName1.Name = "fieldCategoryName1"
+        Me.fieldCategoryName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
+        Me.fieldCategoryName.AreaIndex = 0
+        Me.fieldCategoryName.Caption = "Category"
+        DataSourceColumnBinding5.ColumnName = "CategoryName"
+        Me.fieldCategoryName.DataBinding = DataSourceColumnBinding5
+        Me.fieldCategoryName.Name = "fieldCategoryName"
         '
         'PivotGridControl1
         '
         Me.PivotGridControl1.DataMember = "SalesPerson"
         Me.PivotGridControl1.DataSource = Me.NwindDataSet1
         Me.PivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() {Me.fieldCategoryName1, Me.fieldCountry1, Me.fieldExtendedPrice1, Me.fieldProductName1, Me.fieldSalesPerson1})
+        Me.PivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() {Me.fieldCategoryName, Me.fieldCountry, Me.fieldExtendedPrice, Me.fieldProductName, Me.fieldSalesPerson})
         Me.PivotGridControl1.Location = New System.Drawing.Point(0, 0)
         Me.PivotGridControl1.Name = "PivotGridControl1"
-        Me.PivotGridControl1.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.LegacyOptimized
+        Me.PivotGridControl1.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized
         Me.PivotGridControl1.Size = New System.Drawing.Size(720, 411)
         Me.PivotGridControl1.TabIndex = 0
         '
@@ -107,11 +117,11 @@ Partial Class Form1
     End Sub
     Friend WithEvents NwindDataSet1 As VBWinFormsPivotCustomCellDisplayText.nwindDataSet
     Friend WithEvents SalesPersonTableAdapter1 As VBWinFormsPivotCustomCellDisplayText.nwindDataSetTableAdapters.SalesPersonTableAdapter
-    Friend WithEvents fieldSalesPerson1 As DevExpress.XtraPivotGrid.PivotGridField
-    Friend WithEvents fieldProductName1 As DevExpress.XtraPivotGrid.PivotGridField
-    Friend WithEvents fieldExtendedPrice1 As DevExpress.XtraPivotGrid.PivotGridField
-    Friend WithEvents fieldCountry1 As DevExpress.XtraPivotGrid.PivotGridField
-    Friend WithEvents fieldCategoryName1 As DevExpress.XtraPivotGrid.PivotGridField
+    Friend WithEvents fieldSalesPerson As DevExpress.XtraPivotGrid.PivotGridField
+    Friend WithEvents fieldProductName As DevExpress.XtraPivotGrid.PivotGridField
+    Friend WithEvents fieldExtendedPrice As DevExpress.XtraPivotGrid.PivotGridField
+    Friend WithEvents fieldCountry As DevExpress.XtraPivotGrid.PivotGridField
+    Friend WithEvents fieldCategoryName As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents PivotGridControl1 As DevExpress.XtraPivotGrid.PivotGridControl
 
 End Class
