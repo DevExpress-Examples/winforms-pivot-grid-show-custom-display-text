@@ -13,8 +13,6 @@ namespace WinFormsPivotCustomCellDisplayText {
 
         private void pivotGridControl1_CustomCellDisplayText(object sender, 
                      DevExpress.XtraPivotGrid.PivotCellDisplayTextEventArgs e) {
-            // In this example, if a row total value is less than 2000, 'Low' is displayed instead. 
-            // If the value exceeds 6000, 'High' is displayed; otherwise, 'Middle'.
             if (e.RowValueType == PivotGridValueType.Total ||
                 e.ColumnValueType != PivotGridValueType.Total) return;
             if (Convert.ToSingle(e.Value) < 2000)
