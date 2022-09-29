@@ -5,9 +5,9 @@
 
 # Pivot Grid for WinForms - Show Custom Display Text in Row Total Cells
 
-The following example shows how handle the `CustomCellDisplayText` event to show custom display text in the Pivot Grid cells. 
+The following example describes how handle the `CustomCellDisplayText` event to show custom display text in the Pivot Grid cells. 
 
-The Pivot Grid display the following display text instead of the row total cell value:
+The Pivot Grid shows the following display text instead of the row total cell value:
 
 * "Low" when row total value is less than 2000;
 * "Middle" when row total value is between 2000 and 6000;
