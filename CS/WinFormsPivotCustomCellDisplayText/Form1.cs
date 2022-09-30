@@ -2,12 +2,9 @@
 using System.Windows.Forms;
 using DevExpress.XtraPivotGrid;
 
-namespace WinFormsPivotCustomCellDisplayText
-{
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
+namespace WinFormsPivotCustomCellDisplayText {
+    public partial class Form1 : Form {
+        public Form1() {
             InitializeComponent();
             salesPersonTableAdapter1.Fill(nwindDataSet1.SalesPerson);
             fieldCountry.FilterValues.FilterType = PivotFilterType.Included;
@@ -15,10 +12,7 @@ namespace WinFormsPivotCustomCellDisplayText
         }
 
         private void pivotGridControl1_CustomCellDisplayText(object sender, 
-                     DevExpress.XtraPivotGrid.PivotCellDisplayTextEventArgs e)
-        {
-            // In this example, if a row total value is less than 2000, 'Low' is displayed instead. 
-            // If the value exceeds 6000, 'High' is displayed; otherwise, 'Middle'.
+                     DevExpress.XtraPivotGrid.PivotCellDisplayTextEventArgs e) {
             if (e.RowValueType == PivotGridValueType.Total ||
                 e.ColumnValueType != PivotGridValueType.Total) return;
             if (Convert.ToSingle(e.Value) < 2000)
