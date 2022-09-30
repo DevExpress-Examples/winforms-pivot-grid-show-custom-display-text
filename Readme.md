@@ -11,7 +11,7 @@ The Pivot Grid shows the following display text instead of the row total cell va
 
 * "Low" when row total value is less than 2000;
 * "Middle" when row total value is between 2000 and 6000;
-* "High" when row total value exceeds 6000;
+* "High" when a row's total value exceeds 6000.
 
 ![Piovt Grid](images/pivotgrid.png)
 
